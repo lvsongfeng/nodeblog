@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+</head>
+<body>
+<h1><%= title %></h1>
+<% include include/header.ejs %>
+<div class="container">
+    主要内容
+</div>
+<% include include/footer.ejs %>
+</body>
 </html>
