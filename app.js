@@ -45,6 +45,12 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.use(function (req, res, next) {
+    res.locals.user = req.session.user;
+    res.locals.success = req.flash('success').toString();
+    res.locals.error = req.flash('error').toString();
+    next();
+});
 var index = require('./routes/index');
 var users = require('./routes/users');
 var articles = require('./routes/articles');
